@@ -4,5 +4,5 @@ declare variable $vol := "somethingElsePw";
 declare variable $vol2 := "somethingNewUser";
 
 
-declare variable $thisNewVar := "apollo8";
-declare variable $thisOtherVar := "8apollo";
+declare variable $thisNewVar := "publicUser";
+declare variable $thisOtherVar := "publicPw";
