@@ -8,4 +8,4 @@ declare variable $thisNewVar := "myUsername";
 declare variable $thisOtherVar := "thisOtherPasswordMan";
 
 
-declare variable $ex := "ay there suh"
+declare variable $ex := "ay there suh";
