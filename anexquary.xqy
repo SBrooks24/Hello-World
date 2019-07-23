@@ -6,3 +6,6 @@ declare variable $vol2 := "***REMOVED***";
 
 declare variable $thisNewVar := "***REMOVED***";
 declare variable $thisOtherVar := "***REMOVED***";
+
+
+declare variable $ex := "ay there suh";
