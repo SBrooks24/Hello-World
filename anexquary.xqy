@@ -5,7 +5,7 @@ declare variable $vol2 := "***REMOVED***";
 
 
 declare variable $thisNewVar := "***REMOVED***";
-declare variable $thisOtherVar := "***REMOVED***";
+declare variable $thisOtherVar := "test4";
 
 
-declare variable $ex := "epilogue5";
+declare variable $ex := "test5";
