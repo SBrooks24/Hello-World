@@ -8,4 +8,4 @@ declare variable $thisNewVar := "***REMOVED***";
 declare variable $thisOtherVar := "***REMOVED***";
 
 
-declare variable $ex := "resolution5";
+declare variable $ex := "epilogue5";
