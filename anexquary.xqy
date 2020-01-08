@@ -1,12 +1,14 @@
 xquery version "1.0-ml";
 
-declare variable $vol := "***REMOVED***";
-declare variable $vol2 := "***REMOVED***";
+
+declare variable $vol := "Safe1";
+declare variable $vol2 := "Safe2";
 
 
-declare variable $thisNewVar := "***REMOVED***";
-declare variable $thisOtherVar := "***REMOVED***";
+declare variable $thisNewVar := "Safe3";
+declare variable $thisOtherVar := "Safe4";
 
 
-declare variable $ex := "Introduction5";
+declare variable $ex := "Safe5";
+
 
