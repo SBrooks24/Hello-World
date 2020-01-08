@@ -1,11 +1,11 @@
 xquery version "1.0-ml";
 
-declare variable $vol := "epilogue1";
-declare variable $vol2 := "epilogue2";
+declare variable $vol := "Introduction1";
+declare variable $vol2 := "Introduction2";
 
 
-declare variable $thisNewVar := "epilogue3";
-declare variable $thisOtherVar := "epilogue4";
+declare variable $thisNewVar := "Introduction3";
+declare variable $thisOtherVar := "Introduction4";
 
 
-declare variable $ex := "epilogue5";
+declare variable $ex := "Introduction5";
