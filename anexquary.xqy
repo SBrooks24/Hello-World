@@ -11,4 +11,4 @@ declare variable $thisOtherVar := "Safe4";
 
 declare variable $ex := "Safe5";
 
-
+declare variable $ex := "safe11";
