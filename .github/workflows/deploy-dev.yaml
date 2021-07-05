@@ -29,16 +29,13 @@ jobs:
           architecture: x64
       # Get AWS Secrets
       - name: Get marklogic local password
-        uses: jcam/aws-secrets-manager-action@v0.2.13
+        uses: action-factory/aws-secrets-manager-action@0.2.0
         with:
           aws_access_key_id: AKIASQMFKSK4OXNJHRMO
           aws_secret_access_key: 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
           AWS_REGION: "us-east-1"
           secrets: /first/github_actions/password
           parse_json: true
-      - name: Store the secrets
-        env:
-          MarklogicPassword: ${{ env._first_github_actions_password_LOCAL_GH_ML_PW }}
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
