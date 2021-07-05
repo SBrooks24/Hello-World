@@ -34,7 +34,7 @@ jobs:
           aws_access_key_id: AKIASQMFKSK4OXNJHRMO
           aws_secret_access_key: 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
           AWS_REGION: "us-east-1"
-          secrets: /first/github_actions/password
+          secrets: just/a/secret/one
           parse_json: true
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -46,4 +46,4 @@ jobs:
           echo test, and deploy your project.
       - name: Run a multi-line script again
         run: |
-          echo This is the stored password ${{ env._first_github_actions_password_LOCAL_GH_ML_PW }}
+          echo This is the stored password ${{ env.just_a_secret_one_JUST_A_SEC }}
