@@ -46,4 +46,4 @@ jobs:
           echo test, and deploy your project.
       - name: Run a multi-line script again
         run: |
-          echo This is the stored password ${{ env.just_a_secret_one_JUST_A_SEC }}
+          echo This is the stored password "${{ env.just_a_secret_one_JUST_A_SEC }}"
