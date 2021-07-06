@@ -29,7 +29,7 @@ jobs:
           architecture: x64
       # Get AWS Secrets
       - name: Get marklogic local password
-        uses: jcam/aws-secrets-manager-action@v0.2.13
+        uses: abhilash1in/aws-secrets-manager-action@v1.0.1
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -41,8 +41,10 @@ jobs:
         run: echo Hello, world!
       # Runs a set of commands using the runners shell
       - name: Set selected secret
-        run: echo '::set-output name=SELECTED_SECRET::"${{ env.just_a_secret_one_JUST_A_SEC }}"'
+        run: echo '::set-output name=SELECTED_SECRET::"${{ JUST_A_SECRET_ONE_JUST_A_SEC }}"'
         id: testing-an-output
+      - name: Check if env variable is set after fetching secrets
+        run: if [ -z ${JUST_A_SECRET_ONE+x} ]; then echo "JUST_A_SECRET_ONE is unset"; else echo "JUST_A_SECRET_ONE is set to '$JUST_A_SECRET_ONE'"; fi
       - name: Run a multi-line script again
         run: |
           echo "This is the stored password ${{ steps.testing-an-output.outputs.SELECTED_SECRET }}"
