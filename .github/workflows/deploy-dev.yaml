@@ -31,8 +31,8 @@ jobs:
       - name: Get marklogic local password
         uses: jcam/aws-secrets-manager-action@v0.2.13
         with:
-          aws_access_key_id: secrets.AWS_ACCESS_KEY
-          aws_secret_access_key: secrets.AWS_SECRET_ACCESS_KEY
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-east-1"
           secrets: just/a/secret/one
           parse_json: true
@@ -41,7 +41,7 @@ jobs:
         run: echo Hello, world!
       # Runs a set of commands using the runners shell
       - name: Set selected secret
-        run: echo '::set-output name=SELECTED_SECRET::${{ env.just_a_secret_one_JUST_A_SEC }}'
+        run: echo '::set-output name=SELECTED_SECRET::${{ secrets.AWS_ACCESS_KEY }}'
         id: testing-an-output
       - name: Run a multi-line script again
         run: |
