@@ -40,11 +40,5 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
       # Runs a set of commands using the runners shell
-      - name: Set selected secret
-        run: echo '::set-output name=SELECTED_SECRET::"${{ JUST_A_SECRET_ONE_JUST_A_SEC }}"'
-        id: testing-an-output
       - name: Check if env variable is set after fetching secrets
         run: if [ -z ${JUST_A_SECRET_ONE+x} ]; then echo "JUST_A_SECRET_ONE is unset"; else echo "JUST_A_SECRET_ONE is set to '$JUST_A_SECRET_ONE'"; fi
-      - name: Run a multi-line script again
-        run: |
-          echo "This is the stored password ${{ steps.testing-an-output.outputs.SELECTED_SECRET }}"
