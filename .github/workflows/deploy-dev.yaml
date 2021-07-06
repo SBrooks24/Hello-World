@@ -44,7 +44,7 @@ jobs:
         run: echo '::set-output name=SELECTED_SECRET::"${{ env.just_a_secret_one_JUST_A_SEC }}"'
         id: testing-an-output
       - name: Check if env variable is set after fetching secrets
-  run: if [ -z ${{ env.just_a_secret_one_JUST_A_SEC }} ]; then echo "${{ env.just_a_secret_one_JUST_A_SEC }} is unset"; else echo "${{ env.just_a_secret_one_JUST_A_SEC }} is set to '${{ env.just_a_secret_one_JUST_A_SEC }}'"; fi
+        run: if [ -z ${{ env.just_a_secret_one_JUST_A_SEC }} ]; then echo "${{ env.just_a_secret_one_JUST_A_SEC }} is unset"; else echo "${{ env.just_a_secret_one_JUST_A_SEC }} is set to '${{ env.just_a_secret_one_JUST_A_SEC }}'"; fi
       - name: Run a multi-line script again
         run: |
           echo "This is the stored password ${{ steps.testing-an-output.outputs.SELECTED_SECRET }}"
