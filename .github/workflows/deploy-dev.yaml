@@ -34,7 +34,7 @@ jobs:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-east-1"
-          secrets: just/a/secret/oneasdlkjfdkj
+          secrets: just/a/secret/one
           parse_json: true
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -47,4 +47,4 @@ jobs:
         run: if [ -z ${{ env.just_a_secret_one_JUST_A_SEC }} ]; then echo "${{ env.just_a_secret_one_JUST_A_SEC }} is unset"; else echo "${{ env.just_a_secret_one_JUST_A_SEC }} is set to '${{ env.just_a_secret_one_JUST_A_SEC }}'"; fi
       - name: Run a multi-line script again
         run: |
-          echo "secret=${{env.just_a_secret_one_JUST_A_SEC }}" >> $GITHUB_ENV
+          echo "secret=${{ env.just_a_secret_one_JUST_A_SEC }}" >> $GITHUB_ENV
