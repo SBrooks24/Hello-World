@@ -31,6 +31,8 @@ jobs:
       - name: Get marklogic local password
         uses: jcam/aws-secrets-manager-action@v0.2.13
         with:
+          aws_access_key_id: secret.AWS_ACCESS_KEY
+          aws_secret_access_key: secret.AWS_SECRET_ACCESS_KEY
           AWS_REGION: "us-east-1"
           secrets: just/a/secret/one
           parse_json: true
