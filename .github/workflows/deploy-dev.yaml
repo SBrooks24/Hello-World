@@ -41,7 +41,7 @@ jobs:
         run: echo Hello, world!
       # Runs a set of commands using the runners shell
       - name: Set selected secret
-        run: echo '::set-output name=SELECTED_SECRET::${{ env.just_a_secret_one.JUST_A_SEC }}'
+        run: echo '::set-output name=SELECTED_SECRET::${{ env.JUST_A_SECRET_ONE_JUST_A_SEC }}'
         id: testing-an-output
       - name: Run a multi-line script again
         run: |
