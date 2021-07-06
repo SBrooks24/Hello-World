@@ -34,7 +34,7 @@ jobs:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-east-1"
-          secrets: just/a/secret/one
+          secrets: just/a/secret/oneasdlkjfdkj
           parse_json: true
       # Runs a single command using the runners shell
       - name: Run a one-line script
